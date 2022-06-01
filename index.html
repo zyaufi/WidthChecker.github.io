@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@500;700&family=Roboto:wght@500&display=swap"
+		rel="stylesheet">
+	<title>Width Cek</title>
+	<style>
+		html,
+		body,
+		ul,
+		ol,
+		li,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		div,
+		a {
+			box-sizing: border-box;
+			margin: 0;
+		}
+
+		body {
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: auto;
+			height: 30rem;
+			flex-direction: column;
+			font-family: 'Open Sans', sans-serif;
+			background-color: #1a1a1a;
+			color: #f5f5f5;
+		}
+
+		.buttonClass {
+			font-size: 25px;
+			font-family: Arial;
+			padding: 20px 40px;
+			margin-bottom: 4rem;
+			border-width: 1px;
+			color: #fff;
+			border-color: #599bb3;
+			font-weight: bold;
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+			box-shadow: 0px 10px 20px 3px #f79e6b;
+			text-shadow: 0px 1px 0px #ff8a47b4;
+			background: #ff8947;
+			animation: fadeInAnimation 2s 0s
+		}
+
+		.buttonClass:hover {
+			background: #f3925a;
+		}
+
+		h1 {
+			font-size: 5rem;
+			margin-bottom: 5rem;
+			font-family: 'Montserrat', sans-serif;
+			animation: fade-top 1s 0s;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		#result {
+			font-size: 50px;
+		}
+
+
+		@keyframes fade-top {
+			from {
+				transform: translate3d(0, -400px, 0);
+			}
+
+			to {
+				transform: translate3d(0, 0, 0);
+			}
+		}
+
+		@keyframes fadeInAnimation {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Width Cek</h1>
+	<a href="#" class="buttonClass" onclick="widthCek()">Click here</a>
+	<p id="result"></p>
+	<script>
+		let cek = document.getElementById("result");
+		const widthCek = () => {
+			cek.innerHTML =
+				document.documentElement.clientWidth + " pixels";
+		}
+	</script>
+</body>
+
+</html>
